@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hgftitanium/tinyws#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-fileupload": "^1.2.1"
   }
 }

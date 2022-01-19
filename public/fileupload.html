@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>File upload example with accept</title>
+  <style>
+    div {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form method="POST" enctype="multipart/form-data">    
+    <div>
+      <label for="file">Choose file to upload</label>
+      <input type="file" id="config" name="config_file" accept=".ini">    
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+   </form>
+
+</body>
+</html> 
