@@ -45,15 +45,24 @@ app.post('/fileupload', (req, res) => {
         return res.status(400).send('No files were uploaded.');
     }
 
-    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    let sampleFile = req.files.sampleFile;
+    console.log('req.files ' + req.files)
+    console.log('Object.keys(req.files). ' + Object.keys(req.files))
+
+    console.log('req.files.length ' + req.files.length)
+    console.log('Object.keys(req.files).length ' + Object.keys(req.files).length)
+    
+    configFile = req.files[0]
+    console.log('configFile ' + configFile)
+
+    let sampleFile = req.files['configFile']
+    console.log('sampleFile ' + sampleFile)
 
     // Use the mv() method to place the file somewhere on your server
-    sampleFile.mv(`${__dirname}/some.ini`, function(err) {
+    sampleFile.mv(`${__dirname}/public/some.ini`, function(err) {
         if (err)
             return res.status(500).send(err);
 
-        res.send('File uploaded!');
+        console.log('File uploaded!');
     });
 });
 
