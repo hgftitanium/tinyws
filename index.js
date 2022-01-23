@@ -71,6 +71,11 @@ app.get('/fileupload', (req, res) => {
     res.sendFile(`${__dirname}/public/fileupload.html`);
 });
 
+app.get('/refreshtable', (req, res) => {
+    
+    res.sendFile(`${__dirname}/public/refreshtable.html`);
+});
+
 app.listen(3333, () => {
     console.log('Application listening on port 3333!');
 });

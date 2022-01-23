@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .ruleToRemove {
+            color:#FF0000;
+        }
+    </style>
+    <script type="text/javascript">
+        function RemoveRule () {
+                // removes the ruleToRemove style rule that affects the table
+            var style = document.styleSheets[0];
+            style.removeRule (0);
+
+                // refreshes the table 
+            var table = document.getElementById ("myTable");
+            table.refresh ();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="RemoveRule ();">Remove a rule and refresh the table!</button>
+    <table id="myTable" border="1px" class="ruleToRemove">
+        <tbody>
+            <tr>
+                <td>First row.</td>
+            </tr>
+            <tr>
+                <td>Second row.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
