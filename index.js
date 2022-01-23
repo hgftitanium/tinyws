@@ -76,6 +76,11 @@ app.get('/refreshtable', (req, res) => {
     res.sendFile(`${__dirname}/public/refreshtable.html`);
 });
 
+app.get('/timertotime', (req, res) => {
+    
+    res.sendFile(`${__dirname}/public/timerToTime.html`);
+});
+
 app.listen(3333, () => {
     console.log('Application listening on port 3333!');
 });

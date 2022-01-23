@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    From:
+      * https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_clearinterval
+      * https://www.w3schools.com/jsref/met_win_clearinterval.asp
+  -->  
+
+  <script>
+    function showTime() {
+      const date = new Date();
+      document.getElementById("demo").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    }
+  </script>
+</head>
+<body onload="showTime()"> 
+
+<h1>The Window Object</h1>
+<h2>The setInterval() and clearInterval() Methods</h2>
+
+<p id="demo"></p>
+
+<button onclick="myStop()" id=stopAndGo>Stop the time</button>
+
+<script>
+const myInterval = setInterval(myTimer, 5000);
+
+function myTimer() {
+  const date = new Date();
+  showTime();
+}
+
+function myStop() {
+  clearInterval(myInterval);
+  document.getElementById("stopAndGo").innerHTML = "Stopped";
+}
+</script>
+
+</body>
+</html>
