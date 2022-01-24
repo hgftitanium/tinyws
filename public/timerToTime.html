@@ -24,12 +24,7 @@
 <button onclick="myStop()" id=stopAndGo>Stop the time</button>
 
 <script>
-const myInterval = setInterval(myTimer, 5000);
-
-function myTimer() {
-  const date = new Date();
-  showTime();
-}
+const myInterval = setInterval(showTime, 5000);
 
 function myStop() {
   clearInterval(myInterval);

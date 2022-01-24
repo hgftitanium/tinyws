@@ -81,6 +81,16 @@ app.get('/timertotime', (req, res) => {
     res.sendFile(`${__dirname}/public/timerToTime.html`);
 });
 
+app.get('/states', (req, res) => {
+    
+    res.sendFile(`${__dirname}/public/states.html`);
+});
+
+app.post('/states', (req, res) => {
+    
+    res.sendFile(`${__dirname}/public/states.html`);
+});
+
 app.listen(3333, () => {
     console.log('Application listening on port 3333!');
 });
