@@ -50,7 +50,7 @@
       
       <div>
         <label for="currStateLbl">Estado atual: </label>
-        <label id="currStateLbl"></label>    
+        <label id="currStateLbl"></label>
       </div>
       <br>
       
@@ -74,9 +74,24 @@
 <script>
     const stateNames = ['Visualization', 'Exchanges', 'Values', 'Monitor'];
     const nameStates = {'Visualization' : 0, 'Exchanges' : 1, 'Values' : 2, 'Monitor' : 3};
-    var stateCurr = 0;
+    var stateCurrIndx = 0;
 
+    // Will validate states, but also list them all
     function validateForm() {
+      // Get state chosen values
+      let currState = document.getElementById("currState").value;
+      let prevState = document.getElementById("prevState").value;
+      let nextState = document.getElementById("nextState").value;
+
+      // List state values 
+      console.log('currState ' + currState);
+      console.log('prevState ' + prevState);
+      console.log('prevState ' + nextState);
+      
+//      document.getElementById("currStateLbl").innerHTML = currState;
+//      document.getElementById("prevStateLbl").innerHTML = prevState;
+//      document.getElementById("nextStateLbl").innerHTML = nextState;
+
     }
 </script>
 
