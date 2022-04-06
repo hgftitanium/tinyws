@@ -86,9 +86,9 @@ app.get('/states', (req, res) => {
     res.sendFile(`${__dirname}/public/states.html`);
 });
 
-app.post('/states', (req, res) => {
+app.post('/monitor', (req, res) => {
     
-    res.sendFile(`${__dirname}/public/states.html`);
+    res.sendFile(`${__dirname}/public/monitor.html`);
 });
 
 app.listen(3333, () => {
